@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Nombre Mystère</title>
+        <script src="game.js"></script>
+    </head>
+    <body onload="new_game()">
+
+        <div id="game_selection">
+            <button id="start_game1" onclick="start_player_guess_game()">Le joueur devine</button>
+            <button id="start_game2" onclick="start_computer_guess_game()">L'ordinateur devine</button>
+        </div>
+        
+        <div id="game1">
+            <input type="text" name="player_input" id="player_input">
+            <button id="try_button" onclick="tryNumber()">Essayer</button>
+            <div id="message1"></div>
+            <button id="restart_button1" onclick="new_game()" style="background-color: rgb(8, 8, 8);color: white;border-radius: 20px;"><b>Recommencer</b></button>
+        </div>
+        
+        <div id="game2">
+            <div id="message2"></div>
+            <button id="smaller_button" onclick="click_smaller()">La valeur est plus petite !</button>
+            <button id="bigger_button" onclick="click_bigger()">La valeur est plus grande !</button>
+            <button id="found_button" onclick="click_found()">Trouvé !!</button>
+            <button id="restart_button2" onclick="new_game()" style="background-color: rgb(8, 8, 8);color: white;border-radius: 20px;" ><b>Recommencer</b></button>
+        </div>
+    </body>
+</html>
